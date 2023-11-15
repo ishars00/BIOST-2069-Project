@@ -1,0 +1,352 @@
+1: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498425; Sample name: 38; SRA: SRS8098503
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0114"
+    /age="56"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="9"
+Accession: SAMN17498425	ID: 17498425
+
+2: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498424; Sample name: 37; SRA: SRS8098501
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0111"
+    /age="65"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="6"
+Accession: SAMN17498424	ID: 17498424
+
+3: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498423; Sample name: 36; SRA: SRS8098502
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0110"
+    /age="62"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="10"
+Accession: SAMN17498423	ID: 17498423
+
+4: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498422; Sample name: 35; SRA: SRS8098500
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0104"
+    /age="74"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="3"
+Accession: SAMN17498422	ID: 17498422
+
+5: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498421; Sample name: 34; SRA: SRS8098499
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0076"
+    /age="70"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="5"
+Accession: SAMN17498421	ID: 17498421
+
+6: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498420; Sample name: 33; SRA: SRS8098498
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0064"
+    /age="68"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="4"
+Accession: SAMN17498420	ID: 17498420
+
+7: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498419; Sample name: 31; SRA: SRS8098497
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0058"
+    /age="66"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="1"
+Accession: SAMN17498419	ID: 17498419
+
+8: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498418; Sample name: 29; SRA: SRS8098495
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0036"
+    /age="72"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="9"
+Accession: SAMN17498418	ID: 17498418
+
+9: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498417; Sample name: 28; SRA: SRS8098494
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0031"
+    /age="49"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="3"
+Accession: SAMN17498417	ID: 17498417
+
+10: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498416; Sample name: 27; SRA: SRS8098492
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0028"
+    /age="64"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="2"
+Accession: SAMN17498416	ID: 17498416
+
+11: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498415; Sample name: 26; SRA: SRS8098493
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0002"
+    /age="63"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="5"
+Accession: SAMN17498415	ID: 17498415
+
+12: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498414; Sample name: 25; SRA: SRS8098491
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0113"
+    /age="61"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="4"
+Accession: SAMN17498414	ID: 17498414
+
+13: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498413; Sample name: 24; SRA: SRS8098490
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0105"
+    /age="64"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="4"
+Accession: SAMN17498413	ID: 17498413
+
+14: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498412; Sample name: 23; SRA: SRS8098488
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0092"
+    /age="52"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="8"
+Accession: SAMN17498412	ID: 17498412
+
+15: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498411; Sample name: 21; SRA: SRS8098489
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0073"
+    /age="50"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="1"
+Accession: SAMN17498411	ID: 17498411
+
+16: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498410; Sample name: 20; SRA: SRS8098487
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0070"
+    /age="63"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="0"
+Accession: SAMN17498410	ID: 17498410
+
+17: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498409; Sample name: 17; SRA: SRS8098486
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0048"
+    /age="56"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="4"
+Accession: SAMN17498409	ID: 17498409
+
+18: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498408; Sample name: 16; SRA: SRS8098510
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0047"
+    /age="71"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="7"
+Accession: SAMN17498408	ID: 17498408
+
+19: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498407; Sample name: 14; SRA: SRS8098509
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0034"
+    /age="60"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="6"
+Accession: SAMN17498407	ID: 17498407
+
+20: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498406; Sample name: 13; SRA: SRS8098508
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-0033"
+    /age="57"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="8"
+Accession: SAMN17498406	ID: 17498406
+
+21: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498405; Sample name: 12; SRA: SRS8098507
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-5018"
+    /age="70"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="3"
+Accession: SAMN17498405	ID: 17498405
+
+22: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498404; Sample name: 11; SRA: SRS8098506
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-5017"
+    /age="66"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="4"
+Accession: SAMN17498404	ID: 17498404
+
+23: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498403; Sample name: 10; SRA: SRS8098505
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-5015"
+    /age="77"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="5"
+Accession: SAMN17498403	ID: 17498403
+
+24: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498402; Sample name: 8; SRA: SRS8098504
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-5009"
+    /age="75"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="2"
+Accession: SAMN17498402	ID: 17498402
+
+25: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498401; Sample name: 6; SRA: SRS8098496
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-5007"
+    /age="62"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="2"
+Accession: SAMN17498401	ID: 17498401
+
+26: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498400; Sample name: 4; SRA: SRS8098485
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-5006"
+    /age="74"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="low stress"
+    /pss_4="2"
+Accession: SAMN17498400	ID: 17498400
+
+27: Human sample from Homo sapiens
+Identifiers: BioSample: SAMN17498399; Sample name: 2; SRA: SRS8098484
+Organism: Homo sapiens
+Attributes:
+    /isolate="01-5002"
+    /age="57"
+    /biomaterial provider="Jeffrey Berger, NYU Langone"
+    /sex="female"
+    /tissue="whole blood"
+    /group="high stress"
+    /pss_4="12"
+Accession: SAMN17498399	ID: 17498399
+
+

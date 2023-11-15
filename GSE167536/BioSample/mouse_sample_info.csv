@@ -1,0 +1,23 @@
+SampleName,age,day,isolate,mouse_pool,pool_label,replicate,sex,stimulation,strain,tissue,treatment
+Pool16,8-12 weeks,S8,S8_pool9to12,16,9to12,,female,untreated,C57BL/6J,isolated monocytes,stress
+Pool15,8-12 weeks,S8,S8_pool5to8,15,5to8,,female,untreated,C57BL/6J,isolated monocytes,control
+Pool14,8-12 weeks,S8,S8_pool13to16,14,13to16,,female,untreated,C57BL/6J,isolated monocytes,stress
+Pool13,8-12 weeks,S8,S8_pool1to4,13,1to4,,female,untreated,C57BL/6J,isolated monocytes,control
+Pool12,8-12 weeks,S7,S7_pool9to12,12,9to12,,female,untreated,C57BL/6J,isolated monocytes,stress
+Pool11,8-12 weeks,S7,S7_pool5to8,11,5to8,,female,untreated,C57BL/6J,isolated monocytes,control
+Pool10,8-12 weeks,S7,S7_pool13to16,10,13to16,,female,untreated,C57BL/6J,isolated monocytes,stress
+Pool9,8-12 weeks,S7,S7_pool1to4,9,1to4,,female,untreated,C57BL/6J,isolated monocytes,control
+Pool8,8-12 weeks,S8,S8_pool9to12,8,9to12,,female,LPS,C57BL/6J,isolated monocytes,stress
+Pool7,8-12 weeks,S8,S8_pool5to8,7,5to8,,female,LPS,C57BL/6J,isolated monocytes,control
+Pool6,8-12 weeks,S8,S8_pool13to16,6,13to16,,female,LPS,C57BL/6J,isolated monocytes,stress
+Pool5,8-12 weeks,S8,S8_pool1to4,5,1to4,,female,LPS,C57BL/6J,isolated monocytes,control
+Pool4,8-12 weeks,S7,S7_pool9to12,4,9to12,,female,LPS,C57BL/6J,isolated monocytes,stress
+Pool3,8-12 weeks,S7,S7_pool5to8,3,5to8,,female,LPS,C57BL/6J,isolated monocytes,control
+Pool2,8-12 weeks,S7,S7_pool13to16,2,13to16,,female,LPS,C57BL/6J,isolated monocytes,stress
+Pool1,8-12 weeks,S7,S7_pool1to4,1,1to4,,female,LPS,C57BL/6J,isolated monocytes,control
+M16,8-12 weeks,,,,,biological replicate 16,female,,C57BL/6J,isolated monocytes,stress
+M15,8-12 weeks,,,,,biological replicate 15,female,,C57BL/6J,isolated monocytes,stress
+M14,8-12 weeks,,,,,biological replicate 14,female,,C57BL/6J,isolated monocytes,stress
+M4,8-12 weeks,,,,,biological replicate 4,female,,C57BL/6J,isolated monocytes,control
+M3,8-12 weeks,,,,,biological replicate 3,female,,C57BL/6J,isolated monocytes,control
+M1,8-12 weeks,,,,,biological replicate 1,female,,C57BL/6J,isolated monocytes,control

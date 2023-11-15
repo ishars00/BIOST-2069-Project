@@ -1,0 +1,361 @@
+1: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573730; Sample name: Pool16; SRA: SRS8111511
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S8_pool9to12"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /stimulation="untreated"
+    /day="S8"
+    /pool_label="9to12"
+    /mouse_pool="16"
+Description:
+Unstimulated bone marrow monocytes isolated from mice exposed to chronic variable stress (n = 4 mice per phenotype)
+Accession: SAMN17573730	ID: 17573730
+
+2: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573729; Sample name: Pool15; SRA: SRS8111510
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S8_pool5to8"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /stimulation="untreated"
+    /day="S8"
+    /pool_label="5to8"
+    /mouse_pool="15"
+Description:
+Unstimulated bone marrow monocytes isolated from non-stressed mice (n = 4 mice per phenotype)
+Accession: SAMN17573729	ID: 17573729
+
+3: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573728; Sample name: Pool14; SRA: SRS8111507
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S8_pool13to16"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /stimulation="untreated"
+    /day="S8"
+    /pool_label="13to16"
+    /mouse_pool="14"
+Description:
+Unstimulated bone marrow monocytes isolated from mice exposed to chronic variable stress (n = 4 mice per phenotype)
+Accession: SAMN17573728	ID: 17573728
+
+4: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573727; Sample name: Pool13; SRA: SRS8111509
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S8_pool1to4"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /stimulation="untreated"
+    /day="S8"
+    /pool_label="1to4"
+    /mouse_pool="13"
+Description:
+Unstimulated bone marrow monocytes isolated from non-stressed mice (n = 4 mice per phenotype)
+Accession: SAMN17573727	ID: 17573727
+
+5: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573726; Sample name: Pool12; SRA: SRS8111508
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S7_pool9to12"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /stimulation="untreated"
+    /day="S7"
+    /pool_label="9to12"
+    /mouse_pool="12"
+Description:
+Unstimulated bone marrow monocytes isolated from mice exposed to chronic variable stress (n = 4 mice per phenotype)
+Accession: SAMN17573726	ID: 17573726
+
+6: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573725; Sample name: Pool11; SRA: SRS8111506
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S7_pool5to8"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /stimulation="untreated"
+    /day="S7"
+    /pool_label="5to8"
+    /mouse_pool="11"
+Description:
+Unstimulated bone marrow monocytes isolated from non-stressed mice (n = 4 mice per phenotype)
+Accession: SAMN17573725	ID: 17573725
+
+7: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573724; Sample name: Pool10; SRA: SRS8111519
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S7_pool13to16"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /stimulation="untreated"
+    /day="S7"
+    /pool_label="13to16"
+    /mouse_pool="10"
+Description:
+Unstimulated bone marrow monocytes isolated from mice exposed to chronic variable stress (n = 4 mice per phenotype)
+Accession: SAMN17573724	ID: 17573724
+
+8: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573723; Sample name: Pool9; SRA: SRS8111518
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S7_pool1to4"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /stimulation="untreated"
+    /day="S7"
+    /pool_label="1to4"
+    /mouse_pool="9"
+Description:
+Unstimulated bone marrow monocytes isolated from non-stressed mice (n = 4 mice per phenotype)
+Accession: SAMN17573723	ID: 17573723
+
+9: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573722; Sample name: Pool8; SRA: SRS8111517
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S8_pool9to12"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /stimulation="LPS"
+    /day="S8"
+    /pool_label="9to12"
+    /mouse_pool="8"
+Description:
+LPS stimulated (10 ng/L; 6 h) cytokine response of bone marrow monocytes isolated from mice exposed to chronic variable stress (n = 4 mice per phenotype)
+Accession: SAMN17573722	ID: 17573722
+
+10: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573721; Sample name: Pool7; SRA: SRS8111516
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S8_pool5to8"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /stimulation="LPS"
+    /day="S8"
+    /pool_label="5to8"
+    /mouse_pool="7"
+Description:
+LPS stimulated (10 ng/L; 6 h) cytokine response of bone marrow monocytes isolated from non-stressed mice (n = 4 mice per phenotype)
+Accession: SAMN17573721	ID: 17573721
+
+11: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573720; Sample name: Pool6; SRA: SRS8111514
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S8_pool13to16"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /stimulation="LPS"
+    /day="S8"
+    /pool_label="13to16"
+    /mouse_pool="6"
+Description:
+LPS stimulated (10 ng/L; 6 h) cytokine response of bone marrow monocytes isolated from mice exposed to chronic variable stress (n = 4 mice per phenotype)
+Accession: SAMN17573720	ID: 17573720
+
+12: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573719; Sample name: Pool5; SRA: SRS8111515
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S8_pool1to4"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /stimulation="LPS"
+    /day="S8"
+    /pool_label="1to4"
+    /mouse_pool="5"
+Description:
+LPS stimulated (10 ng/L; 6 h) cytokine response of bone marrow monocytes isolated from non-stressed mice (n = 4 mice per phenotype)
+Accession: SAMN17573719	ID: 17573719
+
+13: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573718; Sample name: Pool4; SRA: SRS8111513
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S7_pool9to12"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /stimulation="LPS"
+    /day="S7"
+    /pool_label="9to12"
+    /mouse_pool="4"
+Description:
+LPS stimulated (10 ng/L; 6 h) cytokine response of bone marrow monocytes isolated from mice exposed to chronic variable stress (n = 4 mice per phenotype)
+Accession: SAMN17573718	ID: 17573718
+
+14: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573717; Sample name: Pool3; SRA: SRS8111512
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S7_pool5to8"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /stimulation="LPS"
+    /day="S7"
+    /pool_label="5to8"
+    /mouse_pool="3"
+Description:
+LPS stimulated (10 ng/L; 6 h) cytokine response of bone marrow monocytes isolated from non-stressed mice (n = 4 mice per phenotype)
+Accession: SAMN17573717	ID: 17573717
+
+15: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573716; Sample name: Pool2; SRA: SRS8111505
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S7_pool13to16"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /stimulation="LPS"
+    /day="S7"
+    /pool_label="13to16"
+    /mouse_pool="2"
+Description:
+LPS stimulated (10 ng/L; 6 h) cytokine response of bone marrow monocytes isolated from mice exposed to chronic variable stress (n = 4 mice per phenotype)
+Accession: SAMN17573716	ID: 17573716
+
+16: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17573715; Sample name: Pool1; SRA: SRS8111504
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /isolate="S7_pool1to4"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /stimulation="LPS"
+    /day="S7"
+    /pool_label="1to4"
+    /mouse_pool="1"
+Description:
+LPS stimulated (10 ng/L; 6 h) cytokine response of bone marrow monocytes isolated from non-stressed mice (n = 4 mice per phenotype)
+Accession: SAMN17573715	ID: 17573715
+
+17: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17478488; Sample name: M16; SRA: SRS8088451
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /replicate="biological replicate 16"
+Accession: SAMN17478488	ID: 17478488
+
+18: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17478487; Sample name: M15; SRA: SRS8088454
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /replicate="biological replicate 15"
+Accession: SAMN17478487	ID: 17478487
+
+19: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17478486; Sample name: M14; SRA: SRS8088450
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="stress"
+    /replicate="biological replicate 14"
+Accession: SAMN17478486	ID: 17478486
+
+20: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17478485; Sample name: M4; SRA: SRS8088449
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /replicate="biological replicate 4"
+Accession: SAMN17478485	ID: 17478485
+
+21: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17478484; Sample name: M3; SRA: SRS8088452
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /replicate="biological replicate 3"
+Accession: SAMN17478484	ID: 17478484
+
+22: Model organism or animal sample from Mus musculus
+Identifiers: BioSample: SAMN17478483; Sample name: M1; SRA: SRS8088453
+Organism: Mus musculus
+Attributes:
+    /strain="C57BL/6J"
+    /age="8-12 weeks"
+    /sex="female"
+    /tissue="isolated monocytes"
+    /treatment="control"
+    /replicate="biological replicate 1"
+Accession: SAMN17478483	ID: 17478483
+
+
