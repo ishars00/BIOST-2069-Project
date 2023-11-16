@@ -1,0 +1,17 @@
+	sample_name	day	monocytes	treatment	pool	new_name
+2	S7.13.16.LPS.Stim	S7	stress	LPS	13to16	Pool2
+4	S7.13.16.Untreated	S7	stress	untreated	13to16	Pool10
+6	S7.1.4.LPS.Stim	S7	control	LPS	1to4	Pool1
+8	S7.1.4.Untreated	S7	control	untreated	1to4	Pool9
+10	S7.5.8.LPS.Stim	S7	control	LPS	5to8	Pool3
+12	S7.5.8.Untreated	S7	control	untreated	5to8	Pool11
+14	S7.9.12.LPS.Stim	S7	stress	LPS	9to12	Pool4
+16	S7.9.12.Untreated	S7	stress	untreated	9to12	Pool12
+18	S8.13.16.LPS.Stim	S8	stress	LPS	13to16	Pool6
+20	S8.13.16.Untreated	S8	stress	untreated	13to16	Pool14
+22	S8.1.4.LPS.Stim	S8	control	LPS	1to4	Pool5
+24	S8.1.4.Untreated	S8	control	untreated	1to4	Pool13
+26	S8.5.8.LPS.Stim	S8	control	LPS	5to8	Pool7
+28	S8.5.8.Untreated	S8	control	untreated	5to8	Pool15
+30	S8.9.12.LPS.Stim	S8	stress	LPS	9to12	Pool8
+32	S8.912.Untreated	S8	stress	untreated	9to12	Pool16
