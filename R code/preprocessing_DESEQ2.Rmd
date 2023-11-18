@@ -18,7 +18,7 @@ library(dplyr)
 ```{r}
 # Need to run this chunk all at once
 
-setwd("~/Documents/Fall 2023/Omics/BIOST-2069-Project/GSE167536")
+setwd("~/Desktop/BIOST 2069/BIOST_2069/GSE167536")
 
 mouse_counts <- read.delim("GSE167536_mouseLPS_rawcounts.txt", header = TRUE, sep = ",")
 
