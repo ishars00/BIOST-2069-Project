@@ -1,0 +1,299 @@
+---
+title: "Data preprocessing"
+output: html_document
+date: "2023-10-25"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(GenomicRanges)
+library(DESeq2)
+library(tidyverse)
+library(dplyr)
+library(csaw)
+library(ChIPseeker)
+library(rtracklayer)
+library(readxl)
+library(MACSr)
+library(ggbio)
+library(data.table)
+```
+
+
+```{r}
+# Need to run this chunk all at once
+
+setwd("~/Desktop/BIOST 2069/BIOST_2069/GSE167536")
+
+mouse_counts <- read.delim("GSE167536_mouseLPS_rawcounts.txt", header = TRUE, sep = ",")
+
+hum_counts <- read.delim("GSE167536_humanstress_rawcounts.txt", header = TRUE, sep = ",")
+
+# import sample data
+mouse_colData <- read_excel("Sample data_edit.xlsx", 
+     sheet = "Mouse")
+hum_colData <- read_excel("Sample data.xlsx", 
+     sheet = "Human")
+```
+
+```{r}
+head(mouse_counts)
+head(mouse_colData)
+head(hum_counts)
+head(hum_colData)
+```
+
+```{r}
+# making sure the row names in colData matches to column names in counts_data
+all(colnames(mouse_counts) %in% rownames(mouse_colData)) #FALSE
+mouse_counts <- mouse_counts %>% column_to_rownames(var = "X")
+mouse_colData <- mouse_colData %>% column_to_rownames(var = "pool")
+all(colnames(mouse_counts) %in% rownames(mouse_colData)) #TRUE now
+
+hum_counts <- hum_counts %>% column_to_rownames(var = "gene")
+hum_colData <- hum_colData %>% column_to_rownames(var = "id")
+all(colnames(hum_counts) %in% rownames(hum_colData)) #TRUE
+
+# are they in the same order?
+all(colnames(mouse_counts) == rownames(mouse_colData))
+all(colnames(hum_counts) == rownames(hum_colData)) # FALSE
+new_order = sort(colnames(hum_counts))
+hum_counts<- hum_counts[,new_order]
+all(colnames(hum_counts) == rownames(hum_colData))
+```
+
+```{r}
+bed_files <- list.files(path = "~/Desktop/BIOST 2069/BIOST_2069/GSE167536/GSE167536_RAW", pattern = "\\.bed$", full.names = TRUE)
+
+atac_data<- fread(bed_files[1])
+atac_gr <- GRanges(seqnames = atac_data$V1, ranges = IRanges(start = atac_data$V2, end = atac_data$V3))
+
+library(ggplot2)
+library(GenomicRanges)
+
+# Create a GenomicRanges object with names
+atac_gr <- GRanges(seqnames = atac_data$V1, ranges = IRanges(start = atac_data$V2, end = atac_data$V3), names = atac_data$V4)
+
+region_of_interest <- GRanges("chr1", IRanges(start = 3043030, 195371965))
+
+atac_gr[1444,]
+
+# Subset the ATAC-seq data within the specified region
+subset_data <- atac_gr[atac_gr %over% region_of_interest]
+
+# Extract the start positions and names of the subset
+start_positions <- start(subset_data)
+names_subset <- names(subset_data)
+
+# Create a data frame for plotting
+plot_data <- data.frame(
+   Position = start_positions,
+   Accessibility = rep(1, length(start_positions))  # Set accessibility value as 1 for all positions
+)
+
+ggplot(plot_data, aes(x = Position, y = Accessibility)) +
+   geom_line() +
+   labs(x = "Genomic Position", y = "Accessibility") +
+   theme_minimal()
+
+plotTracks(Tracks(atac_gr), from = region_of_interest, to = region_of_interest)
+
+library(data.table)
+
+# Read your .bed file into a data table
+atac_data <- fread("your_data.bed")
+
+# Create a matrix with the data you want to visualize
+# Here, I'm assuming the .bed file contains start and end coordinates
+matrix_data <- atac_data[, .(seqnames, Start = start, End = end, Value)]
+
+
+
+```
+
+
+```{r}
+# List all the .bed files in your directory
+bed_files <- list.files(path = "~/Desktop/BIOST 2069/BIOST_2069/GSE167536/GSE167536_RAW", pattern = "\\.bed$", full.names = TRUE)
+
+# Read all .bed files into a single GRanges object
+
+atac_data<-list()
+
+for (i in 1:length(bed_files)) {
+  atac_Data<- import(bed_files[i])
+  
+  atac_data[[i]]<- atac_Data
+}
+
+
+
+rownames(mouse_colData)
+
+sample_names<-rownames(mouse_colData)
+
+atac_data[1]
+
+colData <- data.frame(condition = factor(mouse_colData$chronicStress))
+
+regions_of_interest <- GRanges(seqnames = c("chr1"), # Chromosomes/sequences of interest
+  ranges = IRanges(start = c(3043031), end = c(195371965)) # Coordinates
+
+# Read your .bed files
+atac_data <- read.bed("your_ATAC_data.bed")
+
+# Count reads overlapping with your regions of interest
+counts <- summarizeOverlaps(features = regions_of_interest, reads = atac_data)
+dds <- DESeqDataSetFromMatrix(countData = (atac_data[1]), colData = colData, design = ~chronicStress)
+dds <- DESeq(dds)
+res <- results(dds)
+
+merged_data <- merge(atac_data[1], mouse_colData, by.x = "common_ID_column", by.y = "common_ID_column", all.x = TRUE)
+
+
+atac_data[[1]][1444,]
+seqnames(atac_data[1])
+
+for (i in 1:length(atac_data)) {
+  bed_plot <- autoplot(atac_data[[i]])
+
+  par(mfrow=c(2,3))
+
+  bed_plot
+}
+
+bed_files
+
+pdf(file="~/Desktop/M1.pdf")
+
+dds <- DESeqDataSetFromMatrix(countData = as.data.frame(atac_data[1]), colData = colData, design = ~chronicStress)
+
+as.data.frame(atac_data[1])
+
+mouse_colData
+
+# Perform differential analysis
+dds <- DESeq(dds)
+res <- results(dds)
+
+```
+
+```{r}
+
+file_list <- c("GSE167536_RAW/GSM5106840_ATAC_MONO_BM_M1.macs_peaks.bed.gz", "GSE167536_RAW/GSM5106841_ATAC_MONO_BM_M3.macs_peaks.bed.gz", "GSE167536_RAW/GSM5106842_ATAC_MONO_BM_M4.macs_peaks.bed.gz","GSE167536_RAW/GSM5106843_ATAC_MONO_BM_M14.macs_peaks.bed.gz", "GSE167536_RAW/GSM5106844_ATAC_MONO_BM_M15.macs_peaks.bed.gz", "GSE167536_RAW/GSM5106845_ATAC_MONO_BM_M16.macs_peaks.bed.gz")
+
+# Create an empty list to store the data frames
+bed_data_list <- list()
+
+# Loop through the list of file names and read the data
+for (gz_file in file_list) {
+  # Open the gzipped file
+  con <- gzfile(gz_file, "rt")
+  
+  # Read the contents of the gzipped file and parse it as a data frame (adjust as needed)
+  bed_data <- read.table(con, header = FALSE, sep = "\t")
+  
+  # Close the gzipped file
+  close(con)
+  
+  # Store the data frame in the list
+  bed_data_list[[gz_file]] <- bed_data
+}
+
+bed_data_list$`GSE167536_RAW/GSM5106840_ATAC_MONO_BM_M1.macs_peaks.bed.gz`
+bed_data_list[2]
+
+bed_df <- bed_data_list$`GSE167536_RAW/GSM5106840_ATAC_MONO_BM_M1.macs_peaks.bed.gz`
+
+# Load the GenomicRanges package
+library(GenomicRanges)
+bed_data <- read.table(gzfile("GSE167536_RAW/GSM5106840_ATAC_MONO_BM_M1.macs_peaks.bed.gz"), header = FALSE, col.names = c("chromosome", "start", "end", "names"))
+
+
+gr <- GRanges(seqnames = Rle(bed_data$chromosome), ranges = IRanges(start = bed_data$start, end = bed_data$end))
+
+count_data <- countOverlaps(gr, gr)
+
+
+colData <- DataFrame(condition = factor(c("condition1", "condition2")))
+
+
+
+# Perform differential analysis
+dds <- DESeq(dds)
+res <- results(dds)
+
+# Create a DESeqDataSet object
+dds <- DESeqDataSetFromMatrix(countData = count_data, colData = mouse_colData,design = ~ treatment + chronicStress)
+
+# Estimate size factors and dispersion
+dds <- estimateSizeFactors(dds)
+dds <- estimateDispersions(dds)
+
+# Perform differential analysis
+dds <- DESeq(dds)
+
+# Extract the results
+results <- results(dds)
+
+# Adjust for multiple testing, e.g., using the Benjamini-Hochberg method
+results$padj <- p.adjust(results$pvalue, method = "BH")
+```
+
+```{r}
+# construct DESEQ object
+
+mouse_dds <- DESeqDataSetFromMatrix(countData = mouse_counts,
+                       colData = mouse_colData,
+                       design = ~ treatment + chronicStress)
+#According to the paper, they also corrected for batch effects from the pool... not sure about that so did not include
+
+#design is treatment+chronicStress because we want to perform WALD on stress, regressing out LPS. This is what it states in paper.
+
+hum_dds <- DESeqDataSetFromMatrix(countData = hum_counts,
+                       colData = hum_colData,
+                       design = ~ stress)
+#According to the paper, they also corrected for myocardialinfarction status but we don't have that data?
+
+# pre-filtering: removing rows with low gene counts
+# keeping rows that have at least 10 reads total
+# The paper filtered this way: Only genes with a CPM (counts per million) > 5 in at least 2 samples were included. I fee; like this way is pretty much the same.
+
+keep <- rowSums(counts(mouse_dds)) >= 10
+mouse_dds <- mouse_dds[keep,]
+
+keep <- rowSums(counts(hum_dds)) >= 10
+hum_dds <- hum_dds[keep,]
+
+# set the factor level
+mouse_dds$treatment <- relevel(mouse_dds$treatment, ref = "untreated")
+mouse_dds$chronicStress <- relevel(mouse_dds$chronicStress, ref = "control")
+hum_dds$stress <- relevel(hum_dds$stress, ref = "low")
+
+```
+
+```{r}
+# Run Deseq
+
+mouse_dds <- DESeq(mouse_dds)
+hum_dds <- DESeq(hum_dds)
+
+mouse_res <- results(mouse_dds)
+summary(mouse_res)
+mouse_res0.01 <- results(mouse_dds, alpha = 0.01)
+summary(mouse_res0.01)
+
+hum_res <- results(hum_dds)
+hum_res0.01 <- results(hum_dds, alpha = 0.01)
+summary(hum_res0.01)
+
+#I'm not getting very many DEGs compared to the paper...
+```
+
+```{r}
+plotMA(mouse_res)
+plotMA(hum_res)
+```

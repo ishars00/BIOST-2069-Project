@@ -1,0 +1,116 @@
+---
+title: "Data preprocessing"
+output: html_document
+date: "2023-10-25"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(DESeq2)
+library(tidyverse)
+library(dplyr)
+library(here)
+library(readxl)
+library(EnhancedVolcano)
+```
+
+
+```{r}
+# Set the directory where your files are located
+directory_path <- "/Users/ishars/Desktop/BIOST 2069/BIOST_2069/GSE167536/GSE167536_RAW"
+
+# List all files in the directory with the .txt.gz extension
+files <- list.files(directory_path, pattern = "\\.txt\\.gz$", full.names = TRUE)
+
+con <- list()
+
+for (file in files) {
+
+
+gz_file <- gzfile(file, "rt")
+
+
+data <- read.table(gz_file)
+
+con[[file]]<-data.table::fread(text=paste0(data$V1, collapse = "\n"))
+}
+
+
+con[[6]]
+
+new<- data.frame(matrix(ncol=7, nrow = 33068))
+
+colnames(new)<-c("Sample_id", "M1","M3", "M4", "M14", "M15", "M16")
+
+new$Sample_id<- con[[1]]$id
+new$M1<-con[[1]]$count
+new$M3<-con[[2]]$count
+new$M4<-con[[3]]$count
+new$M14<-con[[4]]$count
+new$M15<-con[[5]]$count
+new$M16<-con[[6]]$count
+
+
+mouse_counts<-new
+
+mouse_col_data<- data.frame(matrix(ncol = 5, nrow = 6))
+
+colnames(mouse_col_data)<- c("names", "chronicStress", "celltype", "datatype", "species")
+
+mouse_col_data$names<- c("M1","M3", "M4", "M14", "M15", "M16")
+mouse_col_data$chronicStress[1:3]<- c("control")
+mouse_col_data$chronicStress[4:6]<- c("stress")
+mouse_col_data$celltype<- "monocyte"
+mouse_col_data$datatype<- "RNA-seq"
+mouse_col_data$species<- "mouse"
+
+mouse_col_data
+```
+
+
+```{r}
+head(mouse_counts)
+head(mouse_col_data)
+```
+
+```{r}
+# making sure the row names in colData matches to column names in counts_data
+all(colnames(mouse_counts) %in% rownames(mouse_col_data)) #FALSE
+mouse_counts <- mouse_counts %>% column_to_rownames(var = "Sample_id")
+mouse_col_data <- mouse_col_data %>% column_to_rownames(var = "names")
+all(colnames(mouse_counts) %in% rownames(mouse_col_data)) #TRUE now
+
+# are they in the same order?
+all(colnames(mouse_counts) == rownames(mouse_col_data))
+```
+
+```{r}
+
+mouse_dds <- DESeqDataSetFromMatrix(countData = mouse_counts,
+                       colData = mouse_col_data,
+                       design = ~ chronicStress)
+
+keep <- rowSums(counts(mouse_dds)) >= 10
+mouse_dds <- mouse_dds[keep,]
+
+
+mouse_dds$chronicStress <- relevel(mouse_dds$chronicStress, ref = "control")
+```
+
+```{r}
+mouse_dds <- DESeq(mouse_dds)
+
+
+mouse_res <- results(mouse_dds)
+summary(mouse_res)
+mouse_res0.05 <- results(mouse_dds, alpha = 0.05)
+summary(mouse_res0.05)
+```
+
+```{r}
+plotMA(mouse_res)
+
+```
