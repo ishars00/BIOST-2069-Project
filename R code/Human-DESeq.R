@@ -7,6 +7,7 @@ library(tidyverse)
 library(here)
 library(DESeq2)
 library(EnhancedVolcano)
+library(pheatmap)
 
 # helpers
 to_named <- function(df, converter, rowcol) {
@@ -64,5 +65,53 @@ EnhancedVolcano(hmn_res,
 paper_res = hmn_res[hmn_res$pvalue < 0.05,]
 nrow(paper_res) # should be 1959
 
+# create pheatmap to match Figure 5B
+# top 100 DE genes by significance on Z-scaled counts `rows`
+top_100 = hmn_res |> 
+  as_tibble(rownames="gene") |>
+  arrange(pvalue) |>
+  head(100) |>
+  pull(gene)
 
+pheatmap(
+  exprs(hmn_eset[top_100]), 
+  scale='row', 
+  clustering_method = 'ward.D2', 
+  annotation_col = pData(hmn_eset) |> select(group),
+  show_rownames = FALSE,
+  show_colnames = FALSE
+  )
+
+### This doesn't seem to match their paper's results...
+# They did provide a list of their top human DE genes (along with pvalues)
+# so, will that recreate their heatmap...? 
+
+# save out all of the DESeq2 results for further analysis (pathway)
+hmn_res |> 
+  as_tibble(rownames="gene") |>
+  arrange(gene) |>
+  write_csv(here('Results','human-deseq2-results.csv'))
+
+#### for Enrichr analysis
+# which needs newline separated ENTREZ gene symbols
+de_out = paper_res |> 
+  as_tibble(rownames='gene')
+
+de_out |>
+  filter(log2FoldChange > 0) |>
+  select(gene) |>
+  write_delim(
+    here('Results', 'human-DE-pathway-up-genes.txt'), 
+    delim='\n', 
+    col_names=FALSE
+  )
+
+de_out |>
+  filter(log2FoldChange < 0) |>
+  select(gene) |>
+  write_delim(
+    here('Results', 'human-DE-pathway-down-genes.txt'), 
+    delim='\n', 
+    col_names=FALSE
+  )
 
