@@ -32,7 +32,7 @@ ego <- gseGO(
   OrgDb = org.Hs.eg.db,
   ont = "ALL",
   keyType = "SYMBOL",
-  pAdjustMethod = "BH",
+  pAdjustMethod = "none", # or BH?
   pvalueCutoff = 0.05, 
   verbose = TRUE,
   eps = 0,
