@@ -1,0 +1,16 @@
+Term,Library,p-value,q-value,z-score,combined score
+mRNA processing (GO:0006397),GO_Biological_Process_2021,6.259e-9,0.000021105,2.981,56.31
+RNA processing (GO:0006396),GO_Biological_Process_2021,1.3098e-7,0.0002208,3.418,54.18
+Spliceosome,KEGG_2021_Human,1.4707e-7,0.000039708,3.702,58.24
+"RNA splicing, via transesterification reactions with bulged adenosine as nucleophile (GO:0000377)",GO_Biological_Process_2021,3.1346e-7,0.0002776,2.871,43
+"mRNA splicing, via spliceosome (GO:0000398)",GO_Biological_Process_2021,3.2935e-7,0.0002776,2.768,41.32
+DNA geometric change (GO:0032392),GO_Biological_Process_2021,5.2878e-7,0.0003566,10.93,158
+"preweaning lethality, complete penetrance MP:0011100",MGI_Mammalian_Phenotype_Level_4_2021,0.0000047571,0.01227,1.614,19.78
+embryonic growth retardation MP:0003984,MGI_Mammalian_Phenotype_Level_4_2021,0.000033031,0.04091,1.9,19.6
+decreased embryo size MP:0001698,MGI_Mammalian_Phenotype_Level_4_2021,0.000047586,0.04091,1.895,18.86
+embryonic growth arrest MP:0001730,MGI_Mammalian_Phenotype_Level_4_2021,0.000079792,0.04461,2.277,21.49
+increased embryonic tissue cell apoptosis MP:0013504,MGI_Mammalian_Phenotype_Level_4_2021,0.000086491,0.04461,3.552,33.23
+Herpes simplex virus 1 infection,KEGG_2021_Human,0.001134,0.153,1.71,11.6
+RNA transport,KEGG_2021_Human,0.002904,0.2613,2.111,12.33
+Ubiquitin mediated proteolysis,KEGG_2021_Human,0.02067,1,1.94,7.524
+Protein processing in endoplasmic reticulum,KEGG_2021_Human,0.02472,1,1.803,6.67

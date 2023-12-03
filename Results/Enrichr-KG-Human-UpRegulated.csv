@@ -1,0 +1,16 @@
+Term,Library,p-value,q-value,z-score,combined score
+type I interferon signaling pathway (GO:0060337),GO_Biological_Process_2021,1.7222e-14,2.5669e-11,11.53,365.4
+cellular response to type I interferon (GO:0071357),GO_Biological_Process_2021,1.7222e-14,2.5669e-11,11.53,365.4
+negative regulation of viral process (GO:0048525),GO_Biological_Process_2021,8.5076e-11,8.184e-8,8.363,193.9
+defense response to symbiont (GO:0140546),GO_Biological_Process_2021,1.0982e-10,8.184e-8,5.694,130.6
+defense response to virus (GO:0051607),GO_Biological_Process_2021,5.2655e-10,3.1267e-7,5.217,111.5
+Epstein-Barr virus infection,KEGG_2021_Human,9.2679e-10,2.5765e-7,4.102,85.31
+abnormal gamma-delta T cell morphology MP:0008343,MGI_Mammalian_Phenotype_Level_4_2021,0.000049498,0.05839,44.23,438.5
+abnormal immune system physiology MP:0001790,MGI_Mammalian_Phenotype_Level_4_2021,0.000091191,0.05839,3.483,32.4
+abnormal lymphocyte morphology MP:0002619,MGI_Mammalian_Phenotype_Level_4_2021,0.0001146,0.05839,5.551,50.37
+increased B-1 B cell number MP:0004977,MGI_Mammalian_Phenotype_Level_4_2021,0.0001181,0.05839,7.76,70.18
+absent Peyer's patches MP:0002831,MGI_Mammalian_Phenotype_Level_4_2021,0.0001517,0.06003,9.494,83.48
+Type I diabetes mellitus,KEGG_2021_Human,0.0004609,0.04753,5.069,38.95
+Influenza A,KEGG_2021_Human,0.0005129,0.04753,2.606,19.75
+TNF signaling pathway,KEGG_2021_Human,0.00115,0.07993,2.92,19.76
+NF-kappa B signaling pathway,KEGG_2021_Human,0.001848,0.09139,2.898,18.24

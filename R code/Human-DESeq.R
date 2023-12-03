@@ -8,6 +8,7 @@ library(here)
 library(DESeq2)
 library(EnhancedVolcano)
 library(pheatmap)
+library(RColorBrewer)
 
 # helpers
 to_named <- function(df, converter, rowcol) {
@@ -51,7 +52,8 @@ hmn_dss = DESeqDataSet(hmn_se, ~ MI_status + group)
 hmn_dss = DESeq(hmn_dss)
 
 # they used pvalue < 0.05 for human DE genes
-hmn_contrast = c('group', 'low_stress', 'high_stress')
+#hmn_contrast = c('group', 'low_stress', 'high_stress')
+hmn_contrast = c('group', 'high_stress', 'low_stress')
 hmn_res = results(hmn_dss, contrast = hmn_contrast)
 hmn_res = hmn_res[complete.cases(hmn_res),]
 EnhancedVolcano(hmn_res, 
@@ -67,7 +69,7 @@ nrow(paper_res) # should be 1959
 
 # create pheatmap to match Figure 5B
 # top 100 DE genes by significance on Z-scaled counts `rows`
-top_100 = hmn_res |> 
+top_100 = paper_res|> 
   as_tibble(rownames="gene") |>
   arrange(pvalue) |>
   head(100) |>
@@ -75,6 +77,7 @@ top_100 = hmn_res |>
 
 pheatmap(
   exprs(hmn_eset[top_100]), 
+  color = colorRampPalette(rev(brewer.pal(n = 5, name ="RdBu")))(50),
   scale='row', 
   clustering_method = 'ward.D2', 
   annotation_col = pData(hmn_eset) |> select(group),
