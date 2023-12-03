@@ -20,7 +20,7 @@ library(EnhancedVolcano)
 
 ```{r}
 # Set the directory where your files are located
-directory_path <- "/Users/ishars/Desktop/BIOST 2069/BIOST_2069/GSE167536/GSE167536_RAW"
+directory_path <- here("GSE167536", "GSE167536_RAW")
 
 # List all files in the directory with the .txt.gz extension
 files <- list.files(directory_path, pattern = "\\.txt\\.gz$", full.names = TRUE)
@@ -28,14 +28,9 @@ files <- list.files(directory_path, pattern = "\\.txt\\.gz$", full.names = TRUE)
 con <- list()
 
 for (file in files) {
-
-
-gz_file <- gzfile(file, "rt")
-
-
-data <- read.table(gz_file)
-
-con[[file]]<-data.table::fread(text=paste0(data$V1, collapse = "\n"))
+  gz_file <- gzfile(file, "rt")
+  data <- read.table(gz_file)
+  con[[file]]<-data.table::fread(text=paste0(data$V1, collapse = "\n"))
 }
 
 
@@ -71,9 +66,9 @@ con[[6]]
 # mouse_col_data
 # 
 # write.csv(mouse_col_data, "~/Desktop/BIOST 2069/BIOST_2069/GSE167536/mouse_Coldata.csv", row.names=FALSE)
-mouse_col_data<-read_csv("~/Desktop/BIOST 2069/BIOST_2069/GSE167536/mouse_Coldata.csv")
+mouse_col_data<-read_csv(here("GSE167536", "mouse_Coldata.csv"))
 
-mouse_counts<- read_csv("~/Desktop/BIOST 2069/BIOST_2069/GSE167536/mouse_counts.csv")
+mouse_counts<- read_csv(here("GSE167536", "mouse_counts.csv"))
 
 ```
 
