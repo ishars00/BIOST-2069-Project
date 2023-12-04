@@ -27,7 +27,7 @@ geneList = genes |> pull(log2FoldChange)
 names(geneList) = genes |> pull(gene)
 
 # load db 
-ego <- gseGO(
+gse <- gseGO(
   geneList = geneList,
   OrgDb = org.Hs.eg.db,
   ont = "ALL",
@@ -39,4 +39,23 @@ ego <- gseGO(
 )
 
 # plot results...?
-dotplot(ego, showCategory=7, split=".sign") + facet_grid(.~.sign)
+dotplot(gse, showCategory=7, split=".sign") + facet_grid(.~.sign)
+
+# do basic enrichment
+ego = enrichGO(
+  gene = hmn_de |> pull(gene),
+  universe = hmn_res |> pull(gene),
+  OrgDb = org.Hs.eg.db,
+  ont = "ALL",
+  keyType = "SYMBOL",
+  pvalueCutoff  = 0.05,
+  pAdjustMethod = 'BH',
+)
+
+dotplot(ego)
+
+# save out enriched pathways for REVIGO analysis
+ego@result |>
+  as_tibble() |>
+  select(ID, pvalue) |>
+  write_delim(here('Results', 'Human-Enriched-Pathways.txt'), delim='\t')

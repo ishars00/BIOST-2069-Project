@@ -118,10 +118,46 @@ res_rrho = RRHO(
   labels = c('Human DE', 'Mouse DE'),
   alternative = 'enrichment',
   plots = TRUE,
-  outputdir = here('Results')
+  outputdir = here('Results', 'RRHO-pvalue')
 )
 
 lattice::levelplot(res_rrho$hypermat)
+
+# try running with the log fold change only
+res_lfc = RRHO(
+  df_rrho |> select(hum_gene, hum_l2fc) |> as.data.frame(),
+  df_rrho |> select(hum_gene, mus_l2fc) |> as.data.frame(),
+  alternative = 'enrichment',
+  labels = c('Human DE', 'Mouse DE'),
+  plots = TRUE,
+  outputdir = here('Results', 'RRHO-lfc')
+)
+
+lattice::levelplot(res_lfc$hypermat)
+
+# run RRHO on just the DE genes from human and mouse
+
+df_filt_rrho = comparison_filt |>
+  dplyr::select(hum_gene, hum_pvalue, hum_l2fc, mus_pvalue, mus_l2fc) |>
+  mutate(
+    hum_rrho = -log10(hum_pvalue) * sign(hum_l2fc),
+    mus_rrho = -log10(mus_pvalue) * sign(mus_l2fc),
+  ) |>
+  group_by(hum_gene) |>
+  summarise(across(everything(), first))
+
+res_filtered_rrho = RRHO(
+  df_filt_rrho |> select(hum_gene, hum_rrho) |> as.data.frame(),
+  df_filt_rrho |> select(hum_gene, mus_rrho) |> as.data.frame(),
+  labels = c('Human DE', 'Mouse DE'),
+  alternative = 'enrichment',
+)
+
+lattice::levelplot(res_filtered_rrho$hypermat)
+
+# Try to make a rank list for the RRHO website
+# https://systems.crump.ucla.edu/rankrank/rankranksimple.php#example
+
 
 # pathway analysis?
 # get the genes that are concurrently expressed in both human and mouse

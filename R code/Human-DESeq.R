@@ -62,6 +62,15 @@ EnhancedVolcano(hmn_res,
                 y='pvalue',
                 pCutoff = 0.05)
 
+# shrink lfc for plotting
+hmn.norm = lfcShrink(hmn_dss, contrast = hmn_contrast, type="normal")
+hmn.norm = hmn.norm[complete.cases(hmn.norm),]
+EnhancedVolcano(hmn.norm, 
+                lab=rownames(hmn_res), 
+                x='log2FoldChange', 
+                y='pvalue',
+                pCutoff = 0.05)
+
 
 # results to match with the paper's Sup Fig 7
 paper_res = hmn_res[hmn_res$pvalue < 0.05,]
@@ -80,7 +89,11 @@ pheatmap(
   color = colorRampPalette(rev(brewer.pal(n = 5, name ="RdBu")))(50),
   scale='row', 
   clustering_method = 'ward.D2', 
-  annotation_col = pData(hmn_eset) |> select(group),
+  annotation_col = pData(hmn_eset) |> select(group, MI_status),
+  annotation_colors = list(
+    group = c('low_stress' = 'blue', 'high_stress' = 'red'),
+    MI_status = c('control' = 'limegreen', 'MI'='gold')
+    ),
   show_rownames = FALSE,
   show_colnames = FALSE
   )
