@@ -76,6 +76,9 @@ EnhancedVolcano(hmn.norm,
 paper_res = hmn_res[hmn_res$pvalue < 0.05,]
 nrow(paper_res) # should be 1959
 
+# try an MAPlot with padj value
+plotMA(hmn_res, 0.05)
+
 # create pheatmap to match Figure 5B
 # top 100 DE genes by significance on Z-scaled counts `rows`
 top_100 = paper_res|> 

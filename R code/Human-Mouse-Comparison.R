@@ -50,6 +50,7 @@ mouse_de |>
 
 # map mouse genename to human orthology genename
 ### 5926 mus genes ==> 3676 human ortholog genes
+# we got 6990 mouse DE ==> 3318 homologues
 mouse_mapped = mouse_de |> 
   inner_join(species_map, by = join_by(gene == mus_refseq))
 
@@ -86,14 +87,14 @@ comparison_filt = comparison |>
 # make double volcano plot
 comparison_filt |>
   ggplot() +
-  geom_point(aes(hum_l2fc, mus_l2fc, color=category), alpha=0.75) +
-  scale_x_continuous('Human Log2 Fold Change', limits=c(-2,2)) +
-  scale_y_continuous('Mouse Log2 Fold Change', limits=c(-2,2)) +
+  geom_point(aes(mus_l2fc, hum_l2fc, color=category), alpha=0.75) +
+  scale_x_continuous('Mouse Log2 Fold Change', limits=c(-2,2)) +
+  scale_y_continuous('Human Log2 Fold Change', limits=c(-2,2)) +
   scale_color_manual(values = c(
     "Up in Both" = "red",
     "Down in Both" = "dodgerblue",
-    "Up Human, Down Mouse" = "gold",
-    "Down Human, Up Mouse" = "limegreen"
+    "Up Human, Down Mouse" = "limegreen",
+    "Down Human, Up Mouse" = "gold"
   ))
 
 comparison_filt |>
